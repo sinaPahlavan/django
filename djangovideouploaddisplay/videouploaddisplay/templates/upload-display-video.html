@@ -10,14 +10,36 @@
 				<form method="post" action="/" enctype="multipart/form-data">
 					{% csrf_token %}
 					<dl>
+
 						<p>
+						<label>Name
+						<input type="text" name="customer_name" required>
+						</label>
+						</p>
+
+						<p>
+						<label>Phone
+						<input type="tel" name="phone_number">
+						</label>
+						</p>
+
+						<p>
+						<label>Email
+						<input type="email" name="email_address">
+						</label>
+					</p>
+
+					<p>
 							<label>Browse and select a video file</label>&nbsp;&nbsp;
 							<input type="file" name="file" autocomplete="off" required>
-						</p>
+					</p>
+
 					</dl>
 					<p>
 						<input type="submit" value="Upload and Display">
 					</p>
+
+
 				</form>
 			</fieldset>
 			
