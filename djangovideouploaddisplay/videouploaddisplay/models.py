@@ -2,7 +2,8 @@ from django.db import models
 # Create your models here.
 
 class Submission(models.Model):
-    name = models.CharField(max_Length=50)
-    email = models.EmailField(max_Length=50)
-    videoSub = models.FileField(max_Length=50)
+    name = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    videoSub = models.FileField(upload_to='')
 
