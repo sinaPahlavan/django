@@ -1,4 +1,6 @@
+from django.forms import ModelForm
 from django import forms
-
-class UploadFileForm(forms.Form):
-    file = forms.FileField()
+from .models import Submission
+class SubmissionForm(forms.Form):
+    class Meta:
+        model = Submission
