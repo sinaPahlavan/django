@@ -7,7 +7,8 @@
 		<div style="width: 500px; margin: auto;">
 			<fieldset name="Video File Upload and Display">
 				{% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
-				<form method="post" action="{% url 'upload_display_video' %}" enctype="multipart/form-data">
+				<!-- {% url 'upload_display_video' %} -->
+				<form method="post" action=" " enctype="multipart/form-data">
 					{% csrf_token %}
 					<dl>
 
@@ -42,7 +43,7 @@
 
 				</form>
 			</fieldset>
-			
+
 			{% if filename %}
 				<div style="margin: 10px auto;">
 					<video autoplay="autoplay" controls="controls" preload="preload">
@@ -50,6 +51,6 @@
 					</video>
 				</div>
 			{% endif %}
-		</div>	
+		</div>
     </body>
 </html>
