@@ -7,13 +7,13 @@ def upload_display_video(request):
     if request.POST:
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():
-            file = request.FILES['file']
+            file = request.FILES['videoSub']
             #print(file.name)
             form.save()
             return render(request, "submitted-successfully.html", {'form': form})
 
         else:
-            print(form.errors)
+            print("form not valid")
 
     else:
         form = SubmissionForm()

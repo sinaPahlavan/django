@@ -8,4 +8,4 @@ class SubmissionForm(ModelForm):
 
         model = Submission
 
-        fields = ('name', 'phone', 'email','videoSub')
+        fields = ('name', 'email', 'title', 'description', 'videoSub')

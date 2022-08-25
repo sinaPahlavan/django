@@ -1,3 +1,10 @@
+<form method="post" action="" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" value="Upload and Display">
+</form>
+
+<!--
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,8 +14,8 @@
 		<div style="width: 500px; margin: auto;">
 			<fieldset name="Video File Upload and Display">
 				{% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
-				<!-- {% url 'upload_display_video' %} -->
-				<form method="post" action=" " enctype="multipart/form-data">
+				 {% url 'upload_display_video' %} fdhdhfdhdhfdfhdhfdh
+				<form method="post" action="" enctype="multipart/form-data">
 					{% csrf_token %}
 					<dl>
 
@@ -54,3 +61,4 @@
 		</div>
     </body>
 </html>
+-->
