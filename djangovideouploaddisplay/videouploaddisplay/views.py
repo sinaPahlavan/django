@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import SubmissionForm
+from .forms import SubmissionForm, ContactForm
 from django.views.decorators.csrf import ensure_csrf_cookie
 
 @ensure_csrf_cookie
@@ -22,6 +22,23 @@ def upload_display_video(request):
 
 # def submitted(request):
 #     return render(request,'submitted-successfully.html')
+
+def contact(request):
+    if request.POST:
+        form = ContactForm(request.POST, request.FILES)
+        if form.is_valid():
+
+            form.save()
+            return render(request, "submitted-successfully.html", {'form': form})
+
+        else:
+            print("form not valid")
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form})
+
 
 def handle_uploaded_file(f):
     with open(f.name, 'wb+') as destination:

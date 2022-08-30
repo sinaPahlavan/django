@@ -7,6 +7,9 @@ from . import views
 urlpatterns = [
     path('', views.upload_display_video, name='upload_display_video'),
     path('admin/', admin.site.urls),
+    path('privacy/',admin.site.urls),
+    path('termsAndConditions/',admin.site.urls),
+    path('contact/',views.contact, name = 'contact'),
     #path('submitted/', views.submitted, name='submitted'),
 
 ]
