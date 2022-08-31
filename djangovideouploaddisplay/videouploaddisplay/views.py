@@ -2,8 +2,11 @@ from django.shortcuts import render
 from .forms import SubmissionForm, ContactForm
 from django.views.decorators.csrf import ensure_csrf_cookie
 
+def index(request):
+    return render(request, 'index.html')
+
 @ensure_csrf_cookie
-def upload_display_video(request):
+def upload(request):
     if request.POST:
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():
