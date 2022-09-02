@@ -1,0 +1,12 @@
+.center-div{
+
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    display: inline-block;
+    margin:50px;
+    width:50%;
+    background-color:yellow;
+}

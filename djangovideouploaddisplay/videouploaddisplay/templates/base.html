@@ -1,40 +1,47 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>My Project</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" >
+
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light" >
-          <a class="navbar-brand" href="/">Encore</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="">Privacy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">Terms and Conditions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'upload' %}">Upload</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="d-flex justify-content-center align-text" style="background-color:red;"  >
-            {% block content %}{% endblock content %}
-        </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" >
+      <a class="navbar-brand" href="/">Encore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Privacy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Terms and Conditions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'upload' %}">Upload</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="center-div"  >
+        {% block content %}{% endblock content %}
+    </div>
+
+
 
     </body>
 </html>
