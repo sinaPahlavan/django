@@ -8,5 +8,7 @@
     display: inline-block;
     margin:50px;
     width:50%;
+    padding:5px;
     background-color:yellow;
 }
+

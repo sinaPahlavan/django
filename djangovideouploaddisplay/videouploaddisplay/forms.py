@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from .models import Submission, Contact
+from .models import *
 
 class SubmissionForm(ModelForm):
 
@@ -9,6 +9,8 @@ class SubmissionForm(ModelForm):
         model = Submission
 
         fields = ('name', 'email', 'title', 'location', 'description', 'videoSub')
+
+
 
 class ContactForm(ModelForm):
 

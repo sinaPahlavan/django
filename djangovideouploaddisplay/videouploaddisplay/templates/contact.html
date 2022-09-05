@@ -3,11 +3,13 @@
 		<div class="form">
 			<form class = "text-center mx-auto" method="post" action="" enctype="multipart/form-data">
 
-			{% csrf_token %}
-			{{form.as_p}}
-			<input type="submit" value="Submit">
-		</form>
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" value="Submit">
+			</form>
 		</div>
+
+
 
 	{% endblock content %}
 
