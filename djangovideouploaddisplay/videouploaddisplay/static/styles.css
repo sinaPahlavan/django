@@ -6,11 +6,12 @@
 
 .form{
     display: inline-block;
+    justify-content:center;
     margin:50px;
-    width:50%;
-    padding:5px;
+    width:60%;
+    padding:15px;
     background-color:pink;
-
+    text-align:center;
 }
 
 .item{
@@ -19,8 +20,10 @@
 
 .button{
     background-color:#710193;
+    padding: 5px;
     text-decoration:none;
     text-align:center;
+    justify-content:center;
 }
 
 a{
