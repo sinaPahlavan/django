@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-
+	{% load static %}
 	<div class="form">
+		<img src="{% static 'dog.png' %}" alt="Dog">
+		<img src="{% static 'cat.png' %}" alt="Cat">
 		<h2 class="item">Welcome to Satec Family!!</h2>
 		<p class="item">By continuing, to agree to our terms and conditions</p>
 		<a class="button" href="upload/">Submit your videooooo!</a>

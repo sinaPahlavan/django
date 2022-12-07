@@ -10,7 +10,7 @@
     margin:50px;
     width:60%;
     padding:15px;
-    background-color:pink;
+    background-color:yellow;
     text-align:center;
 }
 
@@ -28,4 +28,14 @@
 
 a{
     text-decoration:none;
+}
+
+img{
+    display:block;
+    padding: 5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+
 }
